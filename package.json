@@ -1,7 +1,7 @@
 {
   "name": "react-ssr-setup",
   "version": "6.0.0",
-  "author": "Manuel Bieh <npm@manuelbieh.de> (https://github.com/manuelbieh)",
+  "author": "Santa Clous <santaclous112@gmail.com> (https://github.com/santaclous112)",
   "license": "MIT",
   "engines": {
     "node": ">=10.18.1",
