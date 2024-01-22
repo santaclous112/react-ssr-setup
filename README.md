@@ -1,46 +1,36 @@
-# ⚛ React + Express – SSR Setup with TypeScript
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/085d871cd62fe4435865/maintainability)](https://codeclimate.com/github/manuelbieh/react-ssr-setup/maintainability)
-[![dependencies Status](https://david-dm.org/manuelbieh/react-ssr-setup/status.svg)](https://david-dm.org/manuelbieh/react-ssr-setup)
-[![Known Vulnerabilities](https://snyk.io/test/github/manuelbieh/react-ssr-setup/badge.svg)](https://snyk.io/test/github/manuelbieh/react-ssr-setup)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![CircleCI](https://circleci.com/gh/manuelbieh/react-ssr-setup/tree/master.svg?style=svg)](https://circleci.com/gh/manuelbieh/react-ssr-setup/tree/master)
+# ⚛ React-Express–TypeScript-SSR Setup
 
 **Advertising**: I wrote a book about React. There's a German and an English version. Buy one if you like this project and you want to support my work!
 
-| **English**                                                                           | **German**                                                                        |
-| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [![English](./src/shared/assets/book-cover-en-small.png)](https://book.react-js.dev/) | [![German](./src/shared/assets/book-cover-small.png)](https://buch.react-js.dev/) |
-
-**New!** You can now use this project as template! [Click here to create a new repo on GitHub with this project as template.](https://github.com/manuelbieh/react-ssr-setup/generate)
+**New!** You can now use this project as template!
 
 ## TOC
 
-- [Motivation](#motivation)
-- [Goals](#goals)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Tricks](#tricks)
-  - [Client side version (opt-in)](#client-side-version-opt-in)
-  - [Component scaffolding using plop](#client-side-version-opt-in)
-  - [📕 Storybook support](#-storybook-support)
-  - [Keep your project up to date](#keep-your-project-up-to-date)
-  - [Avoid source map generation for faster builds](#avoid-source-map-generation-for-faster-builds)
-  - [Change the port of the dev environment](#change-the-port-of-the-dev-environment)
-  - [Import SVGs as ReactComponent](#import-svgs-as-reactcomponent)
-  - [Use plain JavaScript instead of TypeScript](#use-plain-javascript-instead-of-typescript)
-- [Caveats](#caveats)
-- [Todo](#todo)
-- [Changelog](#changelog)
+- [Motivation]
+- [Goals]
+- [Features]
+- [Installation]
+- [Usage]
+- [Tricks]
+  - [Client side version (opt-in)]
+  - [Component scaffolding using plop]
+  - [📕 Storybook support]
+  - [Keep your project up to date]
+  - [Avoid source map generation for faster builds]
+  - [Change the port of the dev environment]
+  - [Import SVGs as ReactComponent]
+  - [Use plain JavaScript instead of TypeScript]
+- [Caveats]
+- [Todo]
+- [Changelog]
 
 ## Motivation
 
-This is just another React Starter Project as there are literally [hundreds of others out there](https://www.javascriptstuff.com/react-starter-projects/). The reason I created this one was to have one central repo I can base my own future projects on, which contains most of the packages I usually use, is easily extendable, easy to understand, supports server side rendering, and uses all the configs and settings I made good experiences with in the past.
+This is just another React Starter Project as there are literally [hundreds of others out there]. The reason I created this one was to have one central repo I can base my own future projects on, which contains most of the packages I usually use, is easily extendable, easy to understand, supports server side rendering, and uses all the configs and settings I made good experiences with in the past.
 
 Another reason I created my own starter project was because I was setting up two new long term projects and I wanted to be able to use **Webpack 4** and **Babel 7** long before it was stable. None of the bigger and well known starter projects were supporting both by the time I created this starter project. So the idea was born to create my very own. And here we are 🎉
 
-A few things might be familiar when you've worked with other starter projects before. I borrowed many ideas (and will continue to do so) from [Create React App](https://github.com/facebook/create-react-app), [React Starter Kit](https://github.com/kriasoft/react-starter-kit) and other great starter projects because my intention was to create an **up-to-date starter project** for myself **based on best practices** and not to completely reinvent the wheel in every possible way just for the sake of it.
+A few things might be familiar when you've worked with other starter projects before. I borrowed many ideas (and will continue to do so) from [Create React App], [React Starter Kit] and other great starter projects because my intention was to create an **up-to-date starter project** for myself **based on best practices** and not to completely reinvent the wheel in every possible way just for the sake of it.
 
 ## Goals
 
@@ -48,7 +38,7 @@ My goal is to provide a **well-tested, regularly maintained, easily configurable
 
 I use this Starter Project in several real-word projects so it is battle-tested and everytime I fix a bug or add a feature I find useful I will also update this Starter Project. I will also keep the dependencies up-to-date on a regular basis and will also stay updated with all the latest and greatest best practices in the React world and integrate them if possible and useful!
 
-If you have any questions you can always [open an issue on Github](https://github.com/manuelbieh/react-ssr-setup/issues) or reach out to me on [Twitter](https://www.twitter.com/manuelbieh)!
+If you have any questions you can always [open an issue on Github] or reach out to me on [Twitter]!
 
 ## Features
 
@@ -86,13 +76,13 @@ Since it's only using standard APIs so far it is ready to be used with the new R
 
 ## Installation
 
-As a general recommendation you should create a **fork** of this project first or use GitHub's [use this template](https://github.com/manuelbieh/react-ssr-setup/generate) function so you can adjust it to your own needs, add all the dependencies you need and commit everything back into your own repository.
+As a general recommendation you should create a **fork** of this project first or use GitHub's [use this template] function so you can adjust it to your own needs, add all the dependencies you need and commit everything back into your own repository.
 
 Once you've forked the repository here on Github, clone it, `cd` into the directory and run `yarn` (or `npm install`) on your command line to install all the dependencies. You're ready to go now!
 
 ## Usage
 
-There are npm scripts for all the relevant things. The server will always be started on port 8500 unless otherwise specified in `process.env.PORT`. You can use a `.env` file to specify env vars. If you want to use them in your client side code, don't forget to add them in [config/env.js](config/env.js#L37).
+There are npm scripts for all the relevant things. The server will always be started on port 8500 unless otherwise specified in `process.env.PORT`. You can use a `.env` file to specify env vars. If you want to use them in your client side code, don't forget to add them in [config/env.js]
 
 ### Noteworthy scripts:
 
@@ -130,7 +120,7 @@ Starts `webpack-bundle-analyzer` to give you the opportunity to analyze your bun
 
 #### `yarn depgraph`
 
-Creates an image of your dependency graph. Requires [GraphVIZ](https://www.graphviz.org/) to be in your system's `PATH`
+Creates an image of your dependency graph. Requires [GraphVIZ] to be in your system's `PATH`
 
 #### `yarn plop`
 
@@ -176,7 +166,7 @@ If you want _your_ project to stay up to date with recent changes to _this_ proj
 git remote add upstream git@github.com:manuelbieh/react-ssr-setup.git
 ```
 
-More on that can be found on Github: [Syncing a fork](https://help.github.com/articles/syncing-a-fork/).
+More on that can be found on Github: [Syncing a fork].
 
 ### Avoid source map generation for faster builds
 
@@ -195,8 +185,6 @@ import { ReactComponent as Logo } from './Logo.svg';
 ```
 
 Then you can use it in JSX like `<div><Logo /></div>`.
-
-[Here is a video](https://egghead.io/lessons/react-add-svgs-as-react-components-with-create-react-app-2-0) that explains that a bit more.
 
 <!--
 ### Managing i18n translation files
@@ -224,35 +212,13 @@ You can just do it‬™. Really. Name your files `.js` instead of `.ts`/`.tsx` 
 - remove `tsConfig` option from `.dependency-cruiser.js`
 -->
 
-## Caveats
+### Contacts
 
-- ~~[1] MiniCSSExtractPlugin doesn't play nicely with consecutive builds in Webpack's watchmode yet ([Github issue here](https://github.com/webpack-contrib/mini-css-extract-plugin/issues/23)). So I'm using ExtractTextWebpackPlugin until this is fixed~~ Fixed! [490e6e9](https://github.com/manuelbieh/react-ssr-setup/commit/490e6e95fc811b0ce42d1bbc1252d3f26c4bd1ab)
-- ~~[2] Hot Module Replacement is still a bit buggy. Not all components have been configured and updated to play nicely with HMR (namely Redux and React-Router)~~ Seems to be fixed (still validating) [66875a1](https://github.com/manuelbieh/react-ssr-setup/commit/66875a108e6a23d704a117b0ef686db644832589)
-- Running the build in production: I **strongly** recommend to serve your static assets using **Nginx** or **Apache** instead of the `Express.static` middleware. That's how I usually do it and that's why you won't see any assets when starting the production server build with Node. If you still want to use `Express.static` in production despite the warning, have a look at the first few lines of `./src/server/index.js`. There's a short comment with a description what you need to do.
+![Gmail](https://github.com/santaclous112/MonilP-Portfolio/blob/master/src/components/Icon/svg/mailto.svg)               
+        santaclous112@gmail.com
 
-## Todo
+![Skype](https://github.com/santaclous112/MonilP-Portfolio/blob/master/src/components/Icon/svg/skype.svg)               
+        live:.cid.772f958a47f37977
 
-- [x] Replace `ExtractTextWebpackPlugin` with `MiniCSSExtractPlugin` once it's working properly
-- [x] Get HMR working (done, mostly)
-- [x] Add HMR for Redux
-- [x] Add HMR for CSS Modules (depends a bit on MiniCSSExtractPlugin) (using ExtractTextWebpackPlugin)
-- [ ] Add React Error Overlay from Create-React-App
-- [x] ~~Add `react-loadable` or `react-universal-component` (or both, still investigating what makes most sense). **Update:** `react-loadable` is out due to [questionable license change](https://github.com/jamiebuilds/react-loadable/commit/c3272b3132e4fe25937c3610b7cd0dd2da48c5e9)~~ Just use React.lazy which was introduced in React 16.6.
-- [x] Improve server side template
-- [x] Add (and use) `react-helmet`
-- [ ] ~~Add/improve server side chunk loading~~ - Wait for the new React Fizz Renderer to land
-- [x] Add test setup using Jest
-- [ ] Add `optimize-css-assets-webpack-plugin` and `postcss-safe-parser` similar to how CRA 2 is doing it
-- [x] Modify ~~`svg-loader`~~ `babel-loader` so SVGs can be imported as React component (see CRA 2)
-- [ ] Add proper [offline support using Workbox](https://webpack.js.org/guides/progressive-web-application/)
-- [ ] Document i18n functionality (scan, pull, push, ...)
-- [ ] Move i18n scripts to an external package to clean up the dependency tree
-- [ ] Fine tuning different minor things (ongoing task)
-
-## Changelog
-
-Moved to its own file: [CHANGELOG.md](CHANGELOG.md)
-
-## License
-
-MIT.
+![Telegram](https://github.com/santaclous112/MonilP-Portfolio/blob/master/src/components/Icon/svg/telegram.svg)               
+        PeaceStar01
